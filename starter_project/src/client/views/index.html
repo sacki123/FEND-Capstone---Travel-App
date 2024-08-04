@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="header_title">TRAVEL PLANNER</h1>
+        </div>
+        <div class="sidebar">
+            <aside>
+                <h1>Browse by Topic</h1>
+                <h4>・Most Recent Search</h4>
+                <ul id="sidebar_menu">
+                </ul>
+                <hr>
+                <h4>・Expired trips</h4>
+                <ul id="Expiredtrips">
+                </ul>
+            </aside>
+        </div>
+        <div class="main_content">
+            <div class="photoBox">
+                <div class="input">
+                    <div class="inpLocation">
+                        <label for="location">My trip to </label>
+                        <input type="text" name="location" id="location">
+                    </div>   
+                    <div class="inpDeparting"> 
+                        <label for="departing">Departing </label>
+                        <input type="date" name="departing" id="departing"><br>
+                    </div>
+                    <div class="inpButton">
+                        <button id="btncheckWeather">Check Weather</button>
+                        <button id="btnAddTrip">Add Trip</button>
+                    </div>
+                    <hr>
+                </div>
+                <div>
+                    <div class="card">
+                        <div>
+                            <img id="image" class="card_img" src="" alt="No Image">
+                        </div>
+                        <div>
+                            <div class="inputInfo">
+                                <p id="mytrip"></p>
+                                <p id="departingTo"></p>                
+                            </div>
+                            <div class="current">
+                                <ul>
+                                    <li id="weather"></li>
+                                    <li id="temp"></li>
+                                </ul>
+                                <button id="savetrip">Save Trip</button>
+                                <button id="removetrip">Remove Trip</button>
+                            </div>
+                            <div class="daily">
+                                <div id="countdown"></div>
+                                <table id="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Weather</th>
+                                            <th>Temp(°C)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>    
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="footer">
+            <em> ©2024</em><br>
+            <em>Travel Planner Web Design By HoangNM52@fpt.com</em><br>
+        </div>
+    </div>  
+    <!-- <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script> -->
+</body>
+</html>

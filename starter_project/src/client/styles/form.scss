@@ -1,0 +1,27 @@
+form {
+    border: 1px solid #b23232;
+    border-radius: 3px;
+    padding: 40px;
+}
+
+input {
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+}
+
+#submitButton {
+    color: #4e4eac;
+    padding: 10px 35px;
+    font-weight: bold;
+}
+
+#submitButton:hover {
+    color: #b23232;
+}
+
+.result {
+    border: 2px solid #b23232;
+    margin: 5px;
+}

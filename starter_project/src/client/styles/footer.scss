@@ -1,0 +1,14 @@
+.footer {
+    grid-area: ft;
+    padding-top: 5px;
+    background-image: linear-gradient(to right bottom, #4967ef, #79c14d);
+    text-align: center;
+    font-family: Montserrat, 'Segoe UI', sans-serif;
+    font-size: large;
+}
+
+.footer_img {
+    width: 25px;
+    height: 25px;
+    margin-top: 20px;
+}

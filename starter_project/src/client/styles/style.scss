@@ -1,0 +1,122 @@
+.container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr 120px;
+    grid-template-areas: "hd hd"
+    "sd main"
+    "ft ft";
+    grid-gap: 5px;
+}
+
+.sidebar {
+    grid-area: sd;
+    padding-left: 5px;
+    border: 5px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right bottom, #4967ef, #79c14d);
+}
+
+.sidebar_link {
+    color: #4967ef;
+    text-decoration-line: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sidebar_link_expired {
+    color: #ef4951;
+    text-decoration-line: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.sidebar_link:hover {
+    color: #79c14d;
+}
+
+.sidebar_link_expired:hover {
+    color: #79c14d;
+}
+
+#sidebar_menu {
+    padding-left: 10px;
+}
+
+#Expiredtrips {
+    padding-left: 10px;
+}
+
+@media (max-width: 599px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "hd"
+        "sd"
+        "main"
+        "ft";
+        grid-gap: 5px;
+    }
+
+    .photoBox {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 5px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .card {
+        display: flex;
+        height: auto;
+        flex-direction: column;
+        border: 5px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right bottom, #4967ef, #79c14d);
+        align-items: center;
+        padding: 10px 10px;
+        overflow: hidden;
+    }
+
+    .main_content {
+        grid-area: main;
+        border: none;
+    }
+
+    .input {
+        margin-top: 0;
+        border: 5px solid;
+        border-image-slice: 1;
+        border-image-source: linear-gradient(to right bottom, #4967ef, #79c14d);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "hd"
+        "sd"
+        "main"
+        "ft";
+        grid-gap: 5px;
+    }
+
+    .photoBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 5px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
