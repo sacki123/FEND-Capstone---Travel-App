@@ -1,5 +1,6 @@
 import { getGeoname, getCurentWeather, getPredictedWeather, getPixaBay} from './api';
 import {countdownDay} from './countdowDays';
+import {eventListenersAddTrip} from './eventListeners';
 
 let location = document.getElementById("location");
 let departing = document.getElementById("departing");
@@ -72,8 +73,7 @@ const addElementSidebar = (dataLst,expired = false)=> {
 }
 
 const initial = ()=>{
-    btnAddTrip.addEventListener("click",addTrip);
-    btnAddTrip.disabled = true;
+    eventListenersAddTrip();
     btnCheck.addEventListener("click", checkWeather);
     btnsavetrip.addEventListener("click", saveTrip);
     btnsavetrip.disabled = true;
@@ -247,12 +247,6 @@ const removeTrip = (key)=> {
         countdown.innerText = "";
         table.style.display = 'none';
     }
-}
-
-const addTrip = ()=>{
-    btnCheck.disabled = false;
-    location.value = "";
-    departing.value = "";
 }
 
 initial();
