@@ -151,7 +151,9 @@ const checkWeather = async ()=>{
 
 const saveTrip = ()=>{
     if (localStorage.length > 7) {
-        removeTrip(sidebarLst[sidebarLst.length]); 
+        localStorage.removeItem(sidebarLst[(sidebarLst.length)-1]);
+        const liElement = document.getElementById(sidebarLst[(sidebarLst.length)-1]);
+        liElement.remove();
     }
     const localStorageBody = {};
     const key = new Date();
@@ -175,6 +177,8 @@ const saveTrip = ()=>{
 
 const getTrip = (key) => {
     currentLocalStorageKey = key;
+    btnsavetrip.disabled = true;
+    btnremovetrip.disabled = false;
     let trip = {};
     trip = JSON.parse(localStorage.getItem(key));
     if (Object.keys(trip).length > 0) {
